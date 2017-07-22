@@ -1,0 +1,125 @@
+DEBUG      root            <module>   1094:  - locale: en_US
+INFO       Gui.ConfigWindow createWidgetFromDefinitionDict 398 :  - Creating configuration window
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "~/Documents"'], min = None, max = None, comment = By default look for DXF files in this directory.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "~/Documents"'], min = None, max = None, comment = Export generated gcode by default to this directory.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "/usr/bin/pstoedit"'], min = None, max = None, comment = pstoedit is an external tool to import *.ps (postscript) files and convert them to DXF, in order to import them in dxf2gcode.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'default = "X"'], min = 1, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'default = "Y"'], min = 1, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'default = "Z"'], min = 1, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 0'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 0'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 15.0'], min = None, max = None, comment = Third axis' coordinate at which it can do rapid move.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 3.0'], min = None, max = None, comment = Third axis' margin for which it needs to do a slow move.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 0.0'], min = None, max = None, comment = The top third axis' coordinate of the workpiece.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = -1.5'], min = None, max = None, comment = Relative depth for each cut (third axis' coordinate will be decreased by this value at each step).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = -3.0'], min = None, max = None, comment = Relative final third axis' depth.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 400'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 150'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Enable 3D representation of the piece (requires PyQt5 and OpenGL)
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = When enabled, the shapes that are disabled are still shown on the graphic view.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = When enabled, export path is live updated on the graphic view.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Divide the lines in 2 parts, in order to start the cutting in the middle of a line (usefull for cutter compensation)
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Automatically enable cutter compensation for all the shapes (G41 & G42)
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['milling', 'lathe', 'drag_knife'], min = None, max = None, comment = Machine types supported: milling; lathe; drag_knife
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['mm', 'in'], min = None, max = None, comment = The unit used for all values in this file
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Write output to stdout (console), instead of a file. May be used to interface directly with Linux CNC, for example.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If not checked, DXF2GCODE will create a virtual path for G41 and G42 command. And output will be set to G40; i.e. it will create the path that normally your machine would create with it's cutter compensation.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 360', 'default = 20'], min = 0.0, max = 360.0, comment = drag_angle: if angle of movement exceeds this angle (in degrees), the tool retracts to dragDepth (The dragDepth is given by axis3_slice_depth parameter).
+ This parameter depends on the knife that you are using. A bigger knife cannot make small corners like a smaller knife. You will simply break your knife or destroy your working piece. Now, if the angle your knife has to make is bigger than this angle it will move to a different depth (a less deep position) such that the knife will experience less resistance but still has some (otherwise it will not change its angle at all, whence DRAG knife).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If enabled, it will by default check the TSP for all the shapes in the treeview.
+ If disabled and no shape is checked for TSP optimisation in the listbox, the export order will be as defined in the listbox.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['CONSTRAIN_ORDER_ONLY', 'CONSTRAIN_PLACE_AFTER'], min = None, max = None, comment = Path optimizer behaviour:
+ - CONSTRAIN_ORDER_ONLY: fixed Shapes and optimized Shapes can be mixed. Only order of fixed shapes is kept
+ - CONSTRAIN_PLACE_AFTER: optimized Shapes are always placed after any fixed Shape
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 1', 'default = 0.95'], min = 0.0, max = 1.0, comment = This is a value of how much it should deviate the order with each iteration. The higher the value the more you allow alterations.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 10000', 'default = 20'], min = 0, max = 10000, comment = Number of people the population has for path optimization (values higher than 200 can make everything slow).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'max = 1000000', 'default = 300'], min = 1, max = 1000000, comment = Maximum number of iterations that will be done. This is internally also calculated, based on the number of shapes to optimize.
+ Values higher than 10000 can take really long to solve the TSP and are not recommended.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['ordered', 'random', 'heuristic'], min = None, max = None, comment = Different methods to initialize the population for the TSP optimizer.
+ - Ordered will start with the defined one in the listbox
+ - Random just random
+ - Heuristic will search the nearest neighbors and starts with the resulting order.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 1', 'default = 0.001'], min = 0.0, max = 1.0, comment = Tolerance at which similar points will be interpreted as similar
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'max = 3', 'default = 3'], min = 1, max = 3, comment = Types of check performed during spline conversion:
+ 1: Checking for Nurbs degree (polygon degree) and similar knots consistence
+ 2: Checking for Nurbs degree (polygon degree) and similar control points
+ 3: Performes check 1 and check 2
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 1', 'default = 0.001'], min = 0.0, max = 1.0, comment = This is the tolerance which is used to fit the converted lines and arc segments to the converted NURBS.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If checked, the elements (shape, ...) which are part of a block will be inserted on the layer that belongs to the block (even though the elements might be defined on a different layers)
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = ":"'], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['', 'diameter', 'speed', 'start_radius'], min = None, max = None, comment = Tools table: define here the tools used for milling:
+ - name: this is the number of the tool, it will be used directly in the GCODE (eg 20 for tool T20)
+ - diameter: diameter of the tool
+ - speed: spindle speed in rpm
+ - start_radius: start radius for tool compensation when using G41 / G42 moves
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['', 'gcode'], min = None, max = None, comment = Define here custom GCODE actions:
+ - name: this is the unique name of the action
+ - gcode: the text that will be inserted in the final program (each new line is also translated as a new line in the output file)
+ Custom actions can be inserted in the program by using right-click contextual menu on the treeview.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "logfile.txt"'], min = None, max = None, comment = Logging to textfile is enabled automatically for now
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], min = None, max = None, comment = This really goes to stderr
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], min = None, max = None, comment = Log levels are, in increasing importance: DEBUG; INFO; WARNING; ERROR; CRITICAL
+ Log events with importance >= loglevel are logged to the corresponding output
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], min = None, max = None, comment = Logging level for the message window
+DEBUG      PostPro.PostProcessorConfig load_config 224 :  - read existing varspace '/home/hehongyu/Documents/dxf2gcode-sourcecode-c5e511a2cc6ca3ab84187056aeb3a1f85027d63e/source/postpro_config/postpro_config.cfg'
+INFO       Gui.ConfigWindow createWidgetFromDefinitionDict 398 :  - Creating configuration window
+DEBUG      PostPro.PostProcessorConfig load_config 224 :  - read existing varspace '/home/hehongyu/Documents/dxf2gcode-sourcecode-c5e511a2cc6ca3ab84187056aeb3a1f85027d63e/source/postpro_config/postpro_config.cfg'
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G-CODE for LinuxCNC"'], min = None, max = None, comment = This title is shown in the export dialog and is used by the user to differentiate between the possible different postprocessor configurations.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=".ngc"'], min = None, max = None, comment = This extension is used in the save file export dialog.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['g-code', 'dxf', 'text'], min = None, max = None, comment = This type defines the output format used in the export dialog.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Used to switch between absolute (G90) and relative/incremental coordinates (G91).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If cutter compensation is used, e.g. G41 or G42, this option cancels the compensation when there is a momevement on the 3rd-axis, and enables the compensation again afterwards.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If cutter compensation is used (G41-G42) this will apply the cutter compensation outside the piece (i.e. it is applied before it is at milling depth).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Used for dxfs which only support arcs that are in counterclockwise direction. Turning this on for normal G-Code will result in unintended output.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'default=10000'], min = 0.0, max = None, comment = If an arc's radius exceeds this value, then it will be exported as a line.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G21 (Units in millimeters'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G20 (Units in inches'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G90 (Absolute programming'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G91 (Incremental programming'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G64 (Default cutting'], min = None, max = None, comment = This is code which will be written at the beginning of the exported file.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="M2 (Program end'], min = None, max = None, comment = This is code which will be written at the end of the exported file.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If True 1.000 will be written as +1.000
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'default=4'], min = 0, max = None, comment = Gives the indentation for the values.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If true all values will be padded with zeros up to pre_decimals (e.g. 0001.000).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'default=3'], min = 0, max = None, comment = Gives the accuracy of the output after which it will be rounded.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If false e.g. 1.000 will be given as 1 only.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="."'], min = None, max = None, comment = Give the separator which is used in the exported values (e.g. '.' or ',').
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Enables line numbers into the exported G-Code file.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=10'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=10'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=T%tool_nr M6%nlS%speed%nl'], min = None, max = None, comment = This will be done after each layer, if different tools are used.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=F%feed%nl'], min = None, max = None, comment = This will be done after each change between cutting in plane or cutting in depth.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G0 X%XE Y%YE%nl'], min = None, max = None, comment = This will be done between each shape to cut.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G0 Z%ZE %nl'], min = None, max = None, comment = This will be done between each shape to cut.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default= G1 X%XE Y%YE%nl'], min = None, max = None, comment = This will be used for shape cutting.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default= G1 Z%ZE%nl'], min = None, max = None, comment = This will be used for shape cutting.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G2 X%XE Y%YE I%I J%J%nl'], min = None, max = None, comment = This will be used for shape cutting.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G3 X%XE Y%YE I%I J%J%nl'], min = None, max = None, comment = This will be used for shape cutting.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G40%nl'], min = None, max = None, comment = Generally set to G40%nl
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G41%nl'], min = None, max = None, comment = Generally set to G41%nl
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G42%nl'], min = None, max = None, comment = Generally set to G42%nl
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=M3 M8%nl'], min = None, max = None, comment = This will be done before starting to cut a shape or a contour.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=M9 M5%nl'], min = None, max = None, comment = This will be done after cutting a shape or a contour.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=%nl(%comment'], min = None, max = None, comment = Defines comments' format. Comments are written at some places during the export in order to make the g-code better readable.
+DEBUG      root            <module>   1138:  - Started with following options:
+ArgumentParser(prog='dxf2gcode.py', usage=None, description=None, version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+INFO       root            OpenFileDialog 744 :  - File: /home/hehongyu/Documents/cicle.dxf selected
+INFO       root            load       795 :  - Loading file: /home/hehongyu/Documents/cicle.dxf
+DEBUG      DxfImport.Import Get_Line_Pairs 191 :  - Did read 1350 of linepairs from DXF
+INFO       DxfImport.Import __init__   79  :  - Reading DXF Structure
+INFO       DxfImport.Import Read_Blocks 294 :  - Reading Block *Model_Space; Nr: 0
+DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 1289
+INFO       DxfImport.Import Read_Blocks 294 :  - Reading Block *Paper_Space; Nr: 1
+DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 1308
