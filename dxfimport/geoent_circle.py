@@ -51,6 +51,10 @@ class GeoentCircle(object):
         self.length = 0.0
         self.geo = []
 
+        self.x0=0.0
+        self.y0=0.0
+        self.r=0.0
+
         # Lesen der Geometrie
         # Read the geometry
         self.Read(caller)
@@ -58,6 +62,9 @@ class GeoentCircle(object):
     def __str__(self):
         # how to print the object
         return "\nTyp: Circle " +\
+               "\nX: %f" % self.x0+ \
+               "\nY: %f" % self.y0 + \
+               "\nr: %f" % self.r + \
                "\nNr: %i" % self.Nr +\
                "\nLayer Nr:%i" % self.Layer_Nr +\
                str(self.geo[-1])
@@ -90,15 +97,15 @@ class GeoentCircle(object):
 
         # X Value
         s = lp.index_code(10, s + 1)
-        x0 = float(lp.line_pair[s].value)
+        self.x0 = float(lp.line_pair[s].value)
 
         # Y Value
         s = lp.index_code(20, s + 1)
-        y0 = float(lp.line_pair[s].value)
+        self.y0 = float(lp.line_pair[s].value)
 
         # Radius
         s = lp.index_code(40, s + 1)
-        r = float(lp.line_pair[s].value)
+        self.r = float(lp.line_pair[s].value)
 
         # Searching for an extrusion direction
         s_nxt_xt = lp.index_code(230, s + 1, e)
@@ -107,9 +114,9 @@ class GeoentCircle(object):
             extrusion_dir = float(lp.line_pair[s_nxt_xt].value)
             logger.debug(self.tr('Found extrusion direction: %s') % extrusion_dir)
             if extrusion_dir == -1:
-                x0 = -x0
+                self.x0 = -self.x0
 
-        O = Point(x0, y0)
+        O = Point(self.x0, self.y0)
 
         # Calculate the start and end values of the circle without clipping
         s_ang = -3 * pi / 4
@@ -117,13 +124,13 @@ class GeoentCircle(object):
         e_ang = -3 * pi / 4
 
         # Calculate the start and end values of the arcs
-        Ps = Point(cos(s_ang) * r, sin(s_ang) * r) + O
-        Pm = Point(cos(m_ang) * r, sin(m_ang) * r) + O
-        Pe = Point(cos(e_ang) * r, sin(e_ang) * r) + O
+        Ps = Point(cos(s_ang) * self.r, sin(s_ang) * self.r) + O
+        Pm = Point(cos(m_ang) * self.r, sin(m_ang) * self.r) + O
+        Pe = Point(cos(e_ang) * self.r, sin(e_ang) * self.r) + O
 
         # Annexes to ArcGeo class for geometry
-        self.geo.append(ArcGeo(Ps=Ps, Pe=Pm, O=O, r=r, s_ang=s_ang, e_ang=m_ang, direction=-1))
-        self.geo.append(ArcGeo(Ps=Pm, Pe=Pe, O=O, r=r, s_ang=m_ang, e_ang=e_ang, direction=-1))
+        self.geo.append(ArcGeo(Ps=Ps, Pe=Pm, O=O, r=self.r, s_ang=s_ang, e_ang=m_ang, direction=-1))
+        self.geo.append(ArcGeo(Ps=Pm, Pe=Pe, O=O, r=self.r, s_ang=m_ang, e_ang=e_ang, direction=-1))
 
         # Length corresponds to the length (circumference?) of the circle
         self.length = self.geo[-1].length+self.geo[-2].length

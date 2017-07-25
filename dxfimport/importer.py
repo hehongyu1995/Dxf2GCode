@@ -401,6 +401,7 @@ class ReadDXF(QtCore.QObject):
         elif name == "CIRCLE":
             geo = GeoentCircle(geo_nr, self)
             logger.info(self.tr("--Got a CIRCLE!"))
+
         elif name == "LINE":
             geo = GeoentLine(geo_nr, self)
             logger.info(self.tr("--Got a LINE!"))

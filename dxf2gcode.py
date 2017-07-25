@@ -371,9 +371,10 @@ class MainWindow(QMainWindow):
         is given in this variable too.
         """
 
-        self.MyPostProcessor.exportShapes(self.filename,
+        self.MyPostProcessor.exportGCode(self.filename,
                                           save_filename,
-                                          self.layerContents)
+                                          self.layerContents,
+                                          self.geo)
 
         self.unsetCursor()
 
@@ -805,6 +806,8 @@ class MainWindow(QMainWindow):
                         % (i, len(self.valuesDXF.blocks.Entities[i].geo), len(self.valuesDXF.blocks.Entities[i].cont), layers))
         layers = self.valuesDXF.entities.get_used_layers()
         insert_nr = self.valuesDXF.entities.get_insert_nr()
+        # geo for later use.
+        self.geo=self.valuesDXF.entities.geo
         logger.info(self.tr('Loaded %i entity geometries; reduced to %i contours; used layers: %s; number of inserts %i')
                     % (len(self.valuesDXF.entities.geo), len(self.valuesDXF.entities.cont), layers, insert_nr))
 

@@ -264,7 +264,64 @@ class MyPostProcessor(object):
 
         return PostProConfig
 
+    def exportGCode(self,load_filename,save_filename,LayerContents,geos):
+        """
+                This function performs the export to a file or stdout.
+                It calls the following dedicated export functions and runs
+                though the list of layers to export after checking if there are shapes
+                to export on these layers.
+                @param load_filename: The name of the loaded dxf file. This name is
+                written at the start of the export
+                @param save_filename: The name of the file which shall be created.
+                @param LayerContents: List which includes the order of the
+                LayerContent to be exported and the LayerContent itself includes the
+                export parameters (e.g. mill depth) and the shapes to be exported. The
+                shape order is also given in a list defined in LayerContent.
+                """
+        self.breaks = Breaks(LayerContents)
+        self.initialize_export_vars()
+        # write the beginning code(G28;Go Home)
+        exstr = self.write_gcode_be(load_filename)
 
+        # Move Machine to retraction Area before continuing anything.
+        # Note: none of the changes done in the GUI can affect this height,
+        #       only the config file can do so (intended)
+        exstr += self.rap_pos_z(g.config.vars.Depth_Coordinates['axis3_retract'])
+        for geo in geos:
+            if(geo.Typ=="Circle"):
+                exstr += "G0 X%f Y%f\n" % (geo.x0, geo.y0)
+                exstr += "M42 P13 S255 ;Set the trigger camera pin high\n"
+                exstr += "G4 P500 ;Wait for camera\n"
+                exstr += "M42 P13 S0 ;Set the trigger camera pin low\n"
+
+        # Move machine to the Final Position
+        EndPosition = Point(g.config.vars.Plane_Coordinates['axis1_start_end'],
+                            g.config.vars.Plane_Coordinates['axis2_start_end'])
+
+        exstr += self.rap_pos_xy(EndPosition)
+
+        # Write the end G-Code at the end
+        exstr += self.write_gcode_en()
+
+        exstr = self.make_line_numbers(exstr)
+
+        # If the String shall be given to STDOUT
+        if g.config.vars.General['write_to_stdout']:
+            print(exstr)
+            logger.info(self.tr("Export to STDOUT was successful"))
+            # self.close
+        else:
+            # Export Data to file
+            try:
+                # File open and write
+                f = open(save_filename, "w")
+                f.write(str_encode(exstr))
+                f.close()
+                logger.info(self.tr("Export to FILE was successful"))
+            except IOError:
+                QMessageBox.warning(g.window,
+                                    self.tr("Warning during Export"),
+                                    self.tr("Cannot Save the File"))
     def exportShapes(self, load_filename, save_filename, LayerContents):
         """
         This function performs the export to a file or stdout.
@@ -281,7 +338,7 @@ class MyPostProcessor(object):
         """
         self.breaks = Breaks(LayerContents)
         self.initialize_export_vars()
-
+        # write the beginning code
         exstr = self.write_gcode_be(load_filename)
 
         # Move Machine to retraction Area before continuing anything.
@@ -309,7 +366,7 @@ class MyPostProcessor(object):
                 for shape_nr in LayerContent.exp_order_complete:
                     shape = LayerContent.shapes[shape_nr]
                     logger.debug(self.tr("Beginning export of Shape Nr: %s") % shape.nr)
-
+                    logger.debug(self.tr("type of shape: %s") % type(shape))
                     exstr += self.commentprint("* SHAPE Nr: %i *" % shape.nr)
 
                     exstr += shape.Write_GCode(self)
@@ -418,9 +475,9 @@ class MyPostProcessor(object):
         exported.
         """
         if self.vars.General["output_type"] == 'g-code':
-            exstr = self.tr("(Generated with: %s, Version: %s, Date: %s)\n") % (c.APPNAME, c.VERSION, c.DATE)
-            exstr += self.tr("(Created from file: %s)\n") % re.sub('[()]', '_', load_filename)
-            exstr += self.tr("(Time: %s)\n") % time.asctime()
+            exstr = self.tr(";Generated with: %s, Version: %s, Date: %s\n") % (c.APPNAME, c.VERSION, c.DATE)
+            exstr += self.tr(";Created from file: %s\n") % re.sub('[()]', '_', load_filename)
+            exstr += self.tr(";Time: %s\n") % time.asctime()
         elif self.vars.General["output_type"] == 'dxf':
             exstr = ''
         else:
@@ -433,7 +490,7 @@ class MyPostProcessor(object):
         else:
             exstr += "%s " % self.vars.General["code_begin_units_mm"]
         if self.abs_export:
-            exstr += " %s " % self.vars.General["code_begin_prog_abs"]
+            exstr += "%s " % self.vars.General["code_begin_prog_abs"]
         else:
             exstr += "%s " % self.vars.General["code_begin_prog_inc"]
         exstr += "%s\n" % self.vars.General["code_begin"]
