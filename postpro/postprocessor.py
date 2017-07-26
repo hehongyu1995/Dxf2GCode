@@ -287,18 +287,25 @@ class MyPostProcessor(object):
         # Note: none of the changes done in the GUI can affect this height,
         #       only the config file can do so (intended)
         exstr += self.rap_pos_z(g.config.vars.Depth_Coordinates['axis3_retract'])
-        for geo in geos:
-            if(geo.Typ=="Circle"):
-                exstr += "G0 X%f Y%f\n" % (geo.x0, geo.y0)
-                exstr += "M42 P13 S255 ;Set the trigger camera pin high\n"
-                exstr += "G4 P500 ;Wait for camera\n"
-                exstr += "M42 P13 S0 ;Set the trigger camera pin low\n"
+        for layer in LayerContents:
+            # Move to suitable Z pos
+            exstr+=self.rap_pos_z(layer.axis3_retract)
+            for shape in layer.shapes:
+                if (hasattr(shape.geos[0],"type") and shape.geos[0].type == "Circle"):
+                    r = shape.geos[0].r
+                    x = shape.geos[0].O.x
+                    y = shape.geos[0].O.y
+                    exstr += "G0 X%f Y%f\n" % (x, y)
+                    exstr += "M42 P13 S0 ;Set the trigger camera pin low\n"
+                    exstr += "G4 P500 ;Wait for set Pin state\n"
+                    exstr += "M42 P13 S255 ;Set the trigger camera pin high\n"
+                    exstr += "G4 P500 ;Wait for camera\n"
 
-        # Move machine to the Final Position
-        EndPosition = Point(g.config.vars.Plane_Coordinates['axis1_start_end'],
-                            g.config.vars.Plane_Coordinates['axis2_start_end'])
+        # # Move machine to the Final Position
+        # EndPosition = Point(g.config.vars.Plane_Coordinates['axis1_start_end'],
+        #                     g.config.vars.Plane_Coordinates['axis2_start_end'])
 
-        exstr += self.rap_pos_xy(EndPosition)
+        # exstr += self.rap_pos_xy(EndPosition)
 
         # Write the end G-Code at the end
         exstr += self.write_gcode_en()

@@ -374,7 +374,7 @@ class MainWindow(QMainWindow):
         self.MyPostProcessor.exportGCode(self.filename,
                                           save_filename,
                                           self.layerContents,
-                                          self.geo)
+                                         self.valuesDXF.entities.geo)
 
         self.unsetCursor()
 
@@ -806,8 +806,6 @@ class MainWindow(QMainWindow):
                         % (i, len(self.valuesDXF.blocks.Entities[i].geo), len(self.valuesDXF.blocks.Entities[i].cont), layers))
         layers = self.valuesDXF.entities.get_used_layers()
         insert_nr = self.valuesDXF.entities.get_insert_nr()
-        # geo for later use.
-        self.geo=self.valuesDXF.entities.geo
         logger.info(self.tr('Loaded %i entity geometries; reduced to %i contours; used layers: %s; number of inserts %i')
                     % (len(self.valuesDXF.entities.geo), len(self.valuesDXF.entities.cont), layers, insert_nr))
 
@@ -953,7 +951,7 @@ class MainWindow(QMainWindow):
 
                     self.shapes.append(tmp_shape)
                     if g.config.vars.Import_Parameters['insert_at_block_layer'] and layerNr != -1:
-                        self.addtoLayerContents(tmp_shape, layerNr)
+                        self.addtoLayerContents(tmp_shape, layerNr,ent_geo)
                     else:
                         self.addtoLayerContents(tmp_shape, ent_geo.Layer_Nr)
                     parent.append(tmp_shape)

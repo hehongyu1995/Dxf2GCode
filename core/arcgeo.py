@@ -57,7 +57,7 @@ class ArcGeo(object):
     """
 
     def __init__(self, Ps=None, Pe=None, O=None, r=1,
-                 s_ang=None, e_ang=None, direction=1, drag=False):
+                 s_ang=None, e_ang=None, direction=1, drag=False,type=""):
         """
         Standard Method to initialize the ArcGeo. Not all of the parameters are
         required to fully define a arc. e.g. Ps and Pe may be given or s_ang and
@@ -78,6 +78,7 @@ class ArcGeo(object):
         self.s_ang = s_ang
         self.e_ang = e_ang
         self.drag = drag
+        self.type = type
 
         # Get the Circle center point with known Start and End Points
         if self.O is None:

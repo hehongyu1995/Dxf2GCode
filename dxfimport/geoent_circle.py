@@ -129,8 +129,8 @@ class GeoentCircle(object):
         Pe = Point(cos(e_ang) * self.r, sin(e_ang) * self.r) + O
 
         # Annexes to ArcGeo class for geometry
-        self.geo.append(ArcGeo(Ps=Ps, Pe=Pm, O=O, r=self.r, s_ang=s_ang, e_ang=m_ang, direction=-1))
-        self.geo.append(ArcGeo(Ps=Pm, Pe=Pe, O=O, r=self.r, s_ang=m_ang, e_ang=e_ang, direction=-1))
+        self.geo.append(ArcGeo(Ps=Ps, Pe=Pm, O=O, r=self.r, s_ang=s_ang, e_ang=m_ang, direction=-1,type="Circle"))
+        self.geo.append(ArcGeo(Ps=Pm, Pe=Pe, O=O, r=self.r, s_ang=m_ang, e_ang=e_ang, direction=-1,type="Circle"))
 
         # Length corresponds to the length (circumference?) of the circle
         self.length = self.geo[-1].length+self.geo[-2].length
