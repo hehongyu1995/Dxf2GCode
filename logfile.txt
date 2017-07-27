@@ -117,7 +117,7 @@ DEBUG      root            <module>   1139:  - Started with following options:
 ArgumentParser(prog='dxf2gcode.py', usage=None, description=None, version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
 INFO       root            OpenFileDialog 745 :  - File: /home/hehongyu/Documents/demo2.dxf selected
 INFO       root            load       796 :  - Loading file: /home/hehongyu/Documents/demo2.dxf
-DEBUG      DxfImport.Import Get_Line_Pairs 191 :  - Did read 1845 of linepairs from DXF
+DEBUG      DxfImport.Import Get_Line_Pairs 191 :  - Did read 2007 of linepairs from DXF
 INFO       DxfImport.Import __init__   79  :  - Reading DXF Structure
 INFO       DxfImport.Import Read_Blocks 294 :  - Reading Block *Model_Space; Nr: 0
 DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 1311
@@ -165,6 +165,20 @@ INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
 INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
 INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
 INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
+INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
+INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
+INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
+INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
+INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
+INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
+INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
 INFO       DxfImport.Import __init__   94  :  - Creating Contours of Block Nr: 0
 INFO       DxfImport.Import __init__   94  :  - Creating Contours of Block Nr: 1
 INFO       DxfImport.Import __init__   97  :  - Creating Contours of Entities
@@ -172,174 +186,144 @@ INFO       root            load       801 :  - Loaded layers: 3
 INFO       root            load       802 :  - Loaded blocks: 2
 INFO       root            load       806 :  - Block 0 includes 0 Geometries, reduced to 0 Contours, used layers: []
 INFO       root            load       806 :  - Block 1 includes 0 Geometries, reduced to 0 Contours, used layers: []
-INFO       root            load       810 :  - Loaded 42 entity geometries; reduced to 23 contours; used layers: [0, 1, 2]; number of inserts 0
+INFO       root            load       810 :  - Loaded 56 entity geometries; reduced to 37 contours; used layers: [0, 1, 2]; number of inserts 0
 INFO       root            load       817 :  - Drawing units: millimeters
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->56.464  Y ->266.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->56.464  Y ->266.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->60.000  Y ->270.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->60.000  Y ->270.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 0
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->56.464  Y ->86.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->56.464  Y ->86.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->60.000  Y ->90.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->60.000  Y ->90.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 1
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->116.464  Y ->86.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->116.464  Y ->86.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->120.000  Y ->90.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->120.000  Y ->90.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 2
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->206.464  Y ->86.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->206.464  Y ->86.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->210.000  Y ->90.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->210.000  Y ->90.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 3
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->206.464  Y ->266.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->206.464  Y ->266.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->210.000  Y ->270.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->210.000  Y ->270.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 4
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->81.464  Y ->121.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->81.464  Y ->121.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->85.000  Y ->125.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->85.000  Y ->125.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 5
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->81.464  Y ->151.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->81.464  Y ->151.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->85.000  Y ->155.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->85.000  Y ->155.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 6
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->81.464  Y ->181.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->81.464  Y ->181.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->85.000  Y ->185.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->85.000  Y ->185.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 7
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->81.464  Y ->211.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->81.464  Y ->211.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->85.000  Y ->215.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->85.000  Y ->215.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 8
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->81.464  Y ->241.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->81.464  Y ->241.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->85.000  Y ->245.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->85.000  Y ->245.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 9
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->81.464  Y ->256.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->81.464  Y ->256.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->85.000  Y ->260.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->85.000  Y ->260.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 10
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->136.464  Y ->146.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->136.464  Y ->146.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->140.000  Y ->150.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->140.000  Y ->150.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 11
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->126.464  Y ->156.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->126.464  Y ->156.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->130.000  Y ->160.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->130.000  Y ->160.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 12
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->146.464  Y ->156.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->146.464  Y ->156.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->150.000  Y ->160.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->150.000  Y ->160.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 13
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->126.464  Y ->186.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->126.464  Y ->186.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->130.000  Y ->190.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->130.000  Y ->190.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 14
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->146.464  Y ->186.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->146.464  Y ->186.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->150.000  Y ->190.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->150.000  Y ->190.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 15
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->146.464  Y ->216.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->146.464  Y ->216.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->150.000  Y ->220.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->150.000  Y ->220.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 16
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->126.464  Y ->216.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->126.464  Y ->216.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->130.000  Y ->220.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->130.000  Y ->220.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 17
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->126.464  Y ->246.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->126.464  Y ->246.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->130.000  Y ->250.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->130.000  Y ->250.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 18
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
-DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->146.464  Y ->246.464
-DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->146.464  Y ->246.464
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->150.000  Y ->250.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->150.000  Y ->250.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 19
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->110.000  Y ->120.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->110.000  Y ->120.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 20
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->130.000  Y ->121.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->130.000  Y ->121.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 21
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->150.000  Y ->121.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->150.000  Y ->121.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 22
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->190.000  Y ->120.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->190.000  Y ->120.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 23
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->60.000  Y ->175.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->60.000  Y ->175.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 24
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->210.000  Y ->175.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->210.000  Y ->175.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 25
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
 DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->60.000  Y ->30.000
 DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->30.000  Y ->30.000
-DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 20
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 26
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
 DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->70.000  Y ->280.000
 DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->70.000  Y ->110.000
-DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 21
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 27
 DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
 DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->120.000  Y ->260.000
 DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->120.000  Y ->140.000
-DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 22
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 28
 DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 29
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 30
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 31
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 32
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 33
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 34
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 35
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 36
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
 DEBUG      DxfImport.myCanvasClass autoscale  242 :  - Autoscaling to extend: PyQt5.QtCore.QRectF(0.0, -330.0, 252.0, 346.5)
-DEBUG      root            exportShapes 320 :  - Export the enabled shapes
-DEBUG      root            exportShapes 326 :  - Sorted layers:
-DEBUG      root            exportShapes 328 :  - LayerContents[0] = 
-LayerContent
-nr:     0
-name:   0
-shapes: [<gui.canvas2d.ShapeGUI object at 0x7f6ce21db5a8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db640>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db6d8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db770>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db808>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f218>]
-DEBUG      root            exportShapes 328 :  - LayerContents[1] = 
-LayerContent
-nr:     1
-name:   30
-shapes: [<gui.canvas2d.ShapeGUI object at 0x7f6ce21db8a0>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db938>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db9d0>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dba68>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbb00>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbb98>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f2b0>]
-DEBUG      root            exportShapes 328 :  - LayerContents[2] = 
-LayerContent
-nr:     2
-name:   60
-shapes: [<gui.canvas2d.ShapeGUI object at 0x7f6ce21dbc30>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbcc8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbd60>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbdf8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbe90>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbf28>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f050>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f0e8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f180>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f348>]
-INFO       root            showSaveDialog 535 :  - File: /home/hehongyu/Documents/demo2 selected
-INFO       root            showSaveDialog 536 :  - <a href='/home/hehongyu/Documents/demo2'>/home/hehongyu/Documents/demo2</a>
-DEBUG      PostPro.PostProcessorConfig load_config 224 :  - read existing varspace '/home/hehongyu/Documents/dxf2gcode-sourcecode-c5e511a2cc6ca3ab84187056aeb3a1f85027d63e/source/postpro_config/postpro_config.cfg'
-DEBUG      PostPro.Breaks  __init__   59  :  - Found 0 break layers
-INFO       PostPro.PostProcessor exportGCode 327 :  - Export to FILE was successful
-DEBUG      root            exportShapes 320 :  - Export the enabled shapes
-DEBUG      root            exportShapes 326 :  - Sorted layers:
-DEBUG      root            exportShapes 328 :  - LayerContents[0] = 
-LayerContent
-nr:     0
-name:   0
-shapes: [<gui.canvas2d.ShapeGUI object at 0x7f6ce21db5a8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db640>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db6d8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db770>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db808>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f218>]
-DEBUG      root            exportShapes 328 :  - LayerContents[1] = 
-LayerContent
-nr:     1
-name:   30
-shapes: [<gui.canvas2d.ShapeGUI object at 0x7f6ce21db8a0>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db938>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db9d0>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dba68>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbb00>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbb98>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f2b0>]
-DEBUG      root            exportShapes 328 :  - LayerContents[2] = 
-LayerContent
-nr:     2
-name:   60
-shapes: [<gui.canvas2d.ShapeGUI object at 0x7f6ce21dbc30>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbcc8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbd60>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbdf8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbe90>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbf28>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f050>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f0e8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f180>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f348>]
-INFO       root            showSaveDialog 535 :  - File: /home/hehongyu/Documents/demo2 selected
-INFO       root            showSaveDialog 536 :  - <a href='/home/hehongyu/Documents/demo2'>/home/hehongyu/Documents/demo2</a>
-DEBUG      PostPro.PostProcessorConfig load_config 224 :  - read existing varspace '/home/hehongyu/Documents/dxf2gcode-sourcecode-c5e511a2cc6ca3ab84187056aeb3a1f85027d63e/source/postpro_config/postpro_config.cfg'
-DEBUG      PostPro.Breaks  __init__   59  :  - Found 0 break layers
-INFO       PostPro.PostProcessor exportGCode 327 :  - Export to FILE was successful
-DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
-DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
-DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
-DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
-DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
-DEBUG      root            exportShapes 320 :  - Export the enabled shapes
-DEBUG      root            exportShapes 326 :  - Sorted layers:
-DEBUG      root            exportShapes 328 :  - LayerContents[0] = 
-LayerContent
-nr:     0
-name:   0
-shapes: [<gui.canvas2d.ShapeGUI object at 0x7f6ce21db5a8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db640>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db6d8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db770>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db808>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f218>]
-DEBUG      root            exportShapes 328 :  - LayerContents[1] = 
-LayerContent
-nr:     1
-name:   30
-shapes: [<gui.canvas2d.ShapeGUI object at 0x7f6ce21db8a0>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db938>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21db9d0>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dba68>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbb00>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbb98>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f2b0>]
-DEBUG      root            exportShapes 328 :  - LayerContents[2] = 
-LayerContent
-nr:     2
-name:   60
-shapes: [<gui.canvas2d.ShapeGUI object at 0x7f6ce21dbc30>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbcc8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbd60>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbdf8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbe90>, <gui.canvas2d.ShapeGUI object at 0x7f6ce21dbf28>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f050>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f0e8>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f180>, <gui.canvas2d.ShapeGUI object at 0x7f6ce220f348>]
-INFO       root            showSaveDialog 535 :  - File: /home/hehongyu/Documents/demo2 selected
-INFO       root            showSaveDialog 536 :  - <a href='/home/hehongyu/Documents/demo2'>/home/hehongyu/Documents/demo2</a>
-DEBUG      PostPro.PostProcessorConfig load_config 224 :  - read existing varspace '/home/hehongyu/Documents/dxf2gcode-sourcecode-c5e511a2cc6ca3ab84187056aeb3a1f85027d63e/source/postpro_config/postpro_config.cfg'
-DEBUG      PostPro.Breaks  __init__   59  :  - Found 0 break layers
-INFO       PostPro.PostProcessor exportGCode 327 :  - Export to FILE was successful
-DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
-DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
-DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein

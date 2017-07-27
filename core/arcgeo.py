@@ -121,6 +121,9 @@ class ArcGeo(object):
         self.calc_bounding_box()
 
         self.abs_geo = None
+        if(type is "Circle"):
+            self.Ps=self.O
+            self.Pe=self.O
 
     def __deepcopy__(self, memo):
         return ArcGeo(deepcopy(self.Ps, memo),
@@ -233,6 +236,9 @@ class ArcGeo(object):
         return self.O.get_arc_point(ang, self.r)
 
     def get_start_end_points(self, start_point, angles=None):
+        # if Circle,return center coordinate directly
+
+
         if start_point:
             if angles is None:
                 return self.Ps
@@ -323,7 +329,7 @@ class ArcGeo(object):
         if parent is not None and parent.sca[0] * parent.sca[1] < 0.0:
             direction *= -1
 
-        self.abs_geo = ArcGeo(Ps=Ps, Pe=Pe, O=O, r=r, direction=direction, drag=self.drag)
+        self.abs_geo = ArcGeo(Ps=Ps, Pe=Pe, O=O, r=r, direction=direction, drag=self.drag,type=self.type)
 
     def make_path(self, caller, drawHorLine):
         segments = int(abs(degrees(self.ext)) // 3 + 1)

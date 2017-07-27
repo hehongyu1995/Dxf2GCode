@@ -415,7 +415,13 @@ class MyGraphicsScene(QGraphicsScene):
         for shape_nr in range(len(exp_order)):
             shape = self.shapes[exp_order[shape_nr]]
             st = self.expprv
+            en=None
+            # if hasattr(shape.geos[0], "type") and shape.geos[0].type is "Circle":
+            #     en,self.expprv = shape.geos[0].O,shape
+            # else:
             en, self.expprv = shape.get_start_end_points_physical()
+            if(hasattr(shape.geos[0],"type") and shape.geos[0].type is "Circle"):
+                self.expcol=QtCore.Qt.darkGreen
             self.routearrows.append(Arrow(startp=en,
                                           endp=st,
                                           color=self.expcol,
@@ -461,6 +467,7 @@ class MyGraphicsScene(QGraphicsScene):
 
 class ShapeGUI(QGraphicsItem, Shape):
     PEN_NORMAL = QPen(QtCore.Qt.black, 1, QtCore.Qt.SolidLine)
+    PEN_CIRCLE = QPen(QtCore.Qt.darkBlue,1,QtCore.Qt.SolidLine)
     PEN_NORMAL.setCosmetic(True)
     PEN_SELECT = QPen(QtCore.Qt.red, 2, QtCore.Qt.SolidLine, QtCore.Qt.RoundCap, QtCore.Qt.RoundJoin)
     PEN_SELECT.setCosmetic(True)
@@ -553,6 +560,8 @@ class ShapeGUI(QGraphicsItem, Shape):
                 painter.setPen(ShapeGUI.PEN_RIGHT)
             else:
                 painter.setPen(ShapeGUI.PEN_NORMAL)
+                if hasattr(self.geos[0], "type") and self.geos[0].type is "Circle":
+                    painter.setPen(ShapeGUI.PEN_CIRCLE)
         elif self.isSelected():
             painter.setPen(ShapeGUI.PEN_SELECT_DISABLED)
         else:
