@@ -45,9 +45,17 @@ class LayerContent(object):
         self.tool_diameter = g.config.vars.Tool_Parameters['1']['diameter']
         self.speed = g.config.vars.Tool_Parameters['1']['speed']
         self.start_radius = g.config.vars.Tool_Parameters['1']['start_radius']
-
+        try:
+            retract=float(name)
+            if retract>=5.:
+                self.axis3_retract = retract
+            else:
+                raise ValueError
+        except ValueError:
+            self.axis3_retract = g.config.vars.Depth_Coordinates['axis3_retract']
         # preset defaults
-        self.axis3_retract = g.config.vars.Depth_Coordinates['axis3_retract']
+
+
         self.axis3_safe_margin = g.config.vars.Depth_Coordinates['axis3_safe_margin']
 
     def __str__(self):

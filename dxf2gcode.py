@@ -73,7 +73,6 @@ else:
     from PyQt4 import QtCore
     getOpenFileName = QFileDialog.getOpenFileNameAndFilter
     getSaveFileName = QFileDialog.getSaveFileNameAndFilter
-logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 # Get folder of the main instance and write into globals
 g.folder = os.path.dirname(os.path.abspath(sys.argv[0])).replace("\\", "/")

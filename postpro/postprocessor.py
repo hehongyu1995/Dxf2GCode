@@ -52,7 +52,6 @@ if PY2:
     str_encode = lambda exstr: exstr.encode('utf-8')
 else:
     str_encode = lambda exstr: exstr
-logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger("PostPro.PostProcessor")
 
 
@@ -286,12 +285,13 @@ class MyPostProcessor(object):
         # Move Machine to retraction Area before continuing anything.
         # Note: none of the changes done in the GUI can affect this height,
         #       only the config file can do so (intended)
+
         exstr += self.rap_pos_z(g.config.vars.Depth_Coordinates['axis3_retract'])
         for layer in LayerContents:
             # Move to suitable Z pos
             exstr+="\n"+self.rap_pos_z(layer.axis3_retract)
             for shape in layer.shapes:
-                if (hasattr(shape.geos[0],"type") and shape.geos[0].type == "Circle"):
+                if (hasattr(shape.geos[0],"type") and shape.geos[0].type == "Circle" and shape.disabled is not True):
                     r = shape.geos[0].r
                     x = shape.geos[0].O.x
                     y = shape.geos[0].O.y

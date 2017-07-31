@@ -1,4 +1,4 @@
-DEBUG      root            <module>   1095:  - locale: en_US
+DEBUG      root            <module>   1094:  - locale: en_US
 INFO       Gui.ConfigWindow createWidgetFromDefinitionDict 398 :  - Creating configuration window
 DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "~/Documents"'], min = None, max = None, comment = By default look for DXF files in this directory.
 DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "~/Documents"'], min = None, max = None, comment = Export generated gcode by default to this directory.
@@ -113,16 +113,16 @@ DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctra
 DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=M3 M8%nl'], min = None, max = None, comment = This will be done before starting to cut a shape or a contour.
 DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=M9 M5%nl'], min = None, max = None, comment = This will be done after cutting a shape or a contour.
 DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=%nl(%comment'], min = None, max = None, comment = Defines comments' format. Comments are written at some places during the export in order to make the g-code better readable.
-DEBUG      root            <module>   1139:  - Started with following options:
+DEBUG      root            <module>   1138:  - Started with following options:
 ArgumentParser(prog='dxf2gcode.py', usage=None, description=None, version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
-INFO       root            OpenFileDialog 745 :  - File: /home/hehongyu/Documents/demo2.dxf selected
-INFO       root            load       796 :  - Loading file: /home/hehongyu/Documents/demo2.dxf
-DEBUG      DxfImport.Import Get_Line_Pairs 191 :  - Did read 2007 of linepairs from DXF
+INFO       root            OpenFileDialog 744 :  - File: /home/hehongyu/Documents/demo2.dxf selected
+INFO       root            load       795 :  - Loading file: /home/hehongyu/Documents/demo2.dxf
+DEBUG      DxfImport.Import Get_Line_Pairs 191 :  - Did read 2053 of linepairs from DXF
 INFO       DxfImport.Import __init__   79  :  - Reading DXF Structure
 INFO       DxfImport.Import Read_Blocks 294 :  - Reading Block *Model_Space; Nr: 0
-DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 1311
+DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 1313
 INFO       DxfImport.Import Read_Blocks 294 :  - Reading Block *Paper_Space; Nr: 1
-DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 1330
+DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 1332
 INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
 INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
 INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
@@ -179,15 +179,19 @@ INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
 INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
 INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
 INFO       DxfImport.Import get_geo_entitie 407 :  - --Got a LINE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
+INFO       DxfImport.Import get_geo_entitie 403 :  - --Got a CIRCLE!
 INFO       DxfImport.Import __init__   94  :  - Creating Contours of Block Nr: 0
 INFO       DxfImport.Import __init__   94  :  - Creating Contours of Block Nr: 1
 INFO       DxfImport.Import __init__   97  :  - Creating Contours of Entities
-INFO       root            load       801 :  - Loaded layers: 3
-INFO       root            load       802 :  - Loaded blocks: 2
-INFO       root            load       806 :  - Block 0 includes 0 Geometries, reduced to 0 Contours, used layers: []
-INFO       root            load       806 :  - Block 1 includes 0 Geometries, reduced to 0 Contours, used layers: []
-INFO       root            load       810 :  - Loaded 56 entity geometries; reduced to 37 contours; used layers: [0, 1, 2]; number of inserts 0
-INFO       root            load       817 :  - Drawing units: millimeters
+INFO       root            load       800 :  - Loaded layers: 3
+INFO       root            load       801 :  - Loaded blocks: 2
+INFO       root            load       805 :  - Block 0 includes 0 Geometries, reduced to 0 Contours, used layers: []
+INFO       root            load       805 :  - Block 1 includes 0 Geometries, reduced to 0 Contours, used layers: []
+INFO       root            load       809 :  - Loaded 60 entity geometries; reduced to 41 contours; used layers: [0, 1, 2]; number of inserts 0
+INFO       root            load       816 :  - Drawing units: millimeters
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
 DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->60.000  Y ->270.000
 DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->60.000  Y ->270.000
@@ -293,37 +297,78 @@ DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->210.0
 DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->210.000  Y ->175.000
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 25
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->45.000  Y ->45.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->45.000  Y ->45.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 26
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->45.000  Y ->315.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->45.000  Y ->315.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 27
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->225.000  Y ->315.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->225.000  Y ->315.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 28
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->225.000  Y ->45.000
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->225.000  Y ->45.000
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 29
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
 DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->60.000  Y ->30.000
 DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->30.000  Y ->30.000
-DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 26
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 30
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
 DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->70.000  Y ->280.000
 DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->70.000  Y ->110.000
-DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 27
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 31
 DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
 DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
 DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X ->120.000  Y ->260.000
 DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X ->120.000  Y ->140.000
-DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 28
-DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
-DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 29
-DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
-DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 30
-DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
-DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
-DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 31
-DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
-DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 32
-DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 33
 DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
-DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 34
 DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 35
 DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
 DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
 DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 36
 DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 37
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 38
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 39
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 40
+DEBUG      Core.Shape      isDirectionOfGeosCCW 154 :  - Shoelace method cannot (directly) be applied to this shape
 DEBUG      DxfImport.myCanvasClass autoscale  242 :  - Autoscaling to extend: PyQt5.QtCore.QRectF(0.0, -330.0, 252.0, 346.5)
+DEBUG      DxfImport.myCanvasClass __init__   111 :  - The selected shapes have the following direction: 0
+DEBUG      root            exportShapes 319 :  - Export the enabled shapes
+DEBUG      root            exportShapes 325 :  - Sorted layers:
+DEBUG      root            exportShapes 327 :  - LayerContents[0] = 
+LayerContent
+nr:     0
+name:   0
+shapes: [<gui.canvas2d.ShapeGUI object at 0x7f8354231b00>, <gui.canvas2d.ShapeGUI object at 0x7f8354231b98>, <gui.canvas2d.ShapeGUI object at 0x7f8354231c30>, <gui.canvas2d.ShapeGUI object at 0x7f8354231cc8>, <gui.canvas2d.ShapeGUI object at 0x7f8354231d60>, <gui.canvas2d.ShapeGUI object at 0x7f835425b9d0>, <gui.canvas2d.ShapeGUI object at 0x7f835425ba68>, <gui.canvas2d.ShapeGUI object at 0x7f835425bb00>, <gui.canvas2d.ShapeGUI object at 0x7f835425bb98>, <gui.canvas2d.ShapeGUI object at 0x7f835425bc30>, <gui.canvas2d.ShapeGUI object at 0x7f835425bcc8>, <gui.canvas2d.ShapeGUI object at 0x7f835425bd60>, <gui.canvas2d.ShapeGUI object at 0x7f835425bf28>, <gui.canvas2d.ShapeGUI object at 0x7f8354013050>, <gui.canvas2d.ShapeGUI object at 0x7f83540130e8>, <gui.canvas2d.ShapeGUI object at 0x7f8354013180>, <gui.canvas2d.ShapeGUI object at 0x7f8354013218>, <gui.canvas2d.ShapeGUI object at 0x7f83540132b0>, <gui.canvas2d.ShapeGUI object at 0x7f8354013348>, <gui.canvas2d.ShapeGUI object at 0x7f83540133e0>]
+DEBUG      root            exportShapes 327 :  - LayerContents[1] = 
+LayerContent
+nr:     1
+name:   30
+shapes: [<gui.canvas2d.ShapeGUI object at 0x7f8354231df8>, <gui.canvas2d.ShapeGUI object at 0x7f8354231e90>, <gui.canvas2d.ShapeGUI object at 0x7f8354231f28>, <gui.canvas2d.ShapeGUI object at 0x7f835425b050>, <gui.canvas2d.ShapeGUI object at 0x7f835425b0e8>, <gui.canvas2d.ShapeGUI object at 0x7f835425b180>, <gui.canvas2d.ShapeGUI object at 0x7f835425b770>, <gui.canvas2d.ShapeGUI object at 0x7f835425b808>, <gui.canvas2d.ShapeGUI object at 0x7f835425b8a0>, <gui.canvas2d.ShapeGUI object at 0x7f835425b938>, <gui.canvas2d.ShapeGUI object at 0x7f835425bdf8>]
+DEBUG      root            exportShapes 327 :  - LayerContents[2] = 
+LayerContent
+nr:     2
+name:   60
+shapes: [<gui.canvas2d.ShapeGUI object at 0x7f835425b218>, <gui.canvas2d.ShapeGUI object at 0x7f835425b2b0>, <gui.canvas2d.ShapeGUI object at 0x7f835425b348>, <gui.canvas2d.ShapeGUI object at 0x7f835425b3e0>, <gui.canvas2d.ShapeGUI object at 0x7f835425b478>, <gui.canvas2d.ShapeGUI object at 0x7f835425b510>, <gui.canvas2d.ShapeGUI object at 0x7f835425b5a8>, <gui.canvas2d.ShapeGUI object at 0x7f835425b640>, <gui.canvas2d.ShapeGUI object at 0x7f835425b6d8>, <gui.canvas2d.ShapeGUI object at 0x7f835425be90>]
+INFO       root            showSaveDialog 534 :  - File: /home/hehongyu/Documents/demo2-Calibration.gcode selected
+INFO       root            showSaveDialog 535 :  - <a href='/home/hehongyu/Documents/demo2-Calibration.gcode'>/home/hehongyu/Documents/demo2-Calibration.gcode</a>
+DEBUG      PostPro.PostProcessorConfig load_config 224 :  - read existing varspace '/home/hehongyu/Documents/dxf2gcode-sourcecode-c5e511a2cc6ca3ab84187056aeb3a1f85027d63e/source/postpro_config/postpro_config.cfg'
+DEBUG      PostPro.Breaks  __init__   59  :  - Found 0 break layers
+INFO       PostPro.PostProcessor exportGCode 328 :  - Export to FILE was successful
+DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
+DEBUG      root            closeEvent 1061:  - Closing
